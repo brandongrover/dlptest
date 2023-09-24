@@ -6,13 +6,13 @@
 #### Python3 SMTPD Listener
 
 <p>Simple listener to accept SMTP messages to stdout.<br>
-** py -m smtpd -n -c DebuggingServer localhost:25 **</p>
+__py -m smtpd -n -c DebuggingServer localhost:25__</p>
 <br>
 
 #### DNS Listener
 
 <p>Receive, respond to, and save DNS requests to a text file</p>
-** py .\receivers\fakedns.py <optional_port_number> **
+__py .\receivers\fakedns.py <optional_port_number>__
 <br>
 
 #### Create Data
