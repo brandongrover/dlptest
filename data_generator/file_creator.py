@@ -215,9 +215,7 @@ def generate_fake_data_txt(data_structure, line_count, obfuscate=False):
         txt_file.write(data)
     print(f"TXT file '{filename}' generated successfully.")
 
-if __name__ == '__main__':
-    random_low = 10
-    random_high = 10
+def main(random_low, random_high):
     ### Generate CSV Data ###
     # SIN
     generate_fake_data_csv("Name, SIN", randint(random_low,random_high), obfuscate=False)
@@ -247,3 +245,7 @@ if __name__ == '__main__':
     generate_fake_data_pdf("Name, Drivers License", randint(random_low,random_high), obfuscate=False)
     generate_fake_data_pdf("Name, Date of Birth, Drivers License", randint(random_low,random_high), obfuscate=False)
     generate_fake_data_pdf("Name, Date of Birth, Address, Drivers License", randint(random_low,random_high), obfuscate=False)
+
+if __name__ == '__main__':
+    # Create randomly between 10 and 20 lines of PII in each format
+    main(10, 20)
