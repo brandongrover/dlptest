@@ -38,3 +38,11 @@ def generate_fake_sin():
     sin_number = ''.join(sin_digits)
     fake_sin_number = f"{sin_number[:3]} {sin_number[3:6]} {sin_number[6:]}"
     return fake_sin_number
+
+def generate_random_int():
+    sequence_1 = fake.random_number(digits=randint(1,4))
+    sequence_2 = fake.random_number(digits=randint(1,4))
+    sequence_3 = fake.random_number(digits=randint(1,4))
+    space_or_delimited = ' ' if randint(0,1) == 1 else '-'
+    random_int_string = f"{sequence_1}{space_or_delimited}{sequence_2}{space_or_delimited}{sequence_3}"
+    return random_int_string

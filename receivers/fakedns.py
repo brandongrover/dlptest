@@ -25,8 +25,8 @@ class DNSHandler(socketserver.BaseRequestHandler):
             if question['qtype'] == b'\x00\x01' and question['qclass'] == b'\x00\x01':
                 accepted_questions.append(question)
                 print('\033[32m{}\033[39m'.format(name))
-                file1 = open(f"dns_requests-{datetime.today().strftime('%Y-%m-%d')}.txt", "a")
-                file1.write(f"{self.client_address[0]}|{name}\n")
+                with open(f"dns_requests-{datetime.today().strftime('%Y-%m-%d')}.txt", "a") as file:
+                    file.write(f"{self.client_address[0]}|{name}\n")
         response = self.dns_response_header(data) + self.dns_response_questions(accepted_questions) + self.dns_response_answers(accepted_questions)
         socket.sendto(response, self.client_address)
 
