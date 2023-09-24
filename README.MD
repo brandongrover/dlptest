@@ -5,8 +5,8 @@
 
 #### Python3 SMTPD Listener
 
-<p>Simple listener to accept SMTP messages to stdout.</p>
-** py -m smtpd -n -c DebuggingServer localhost:25 **
+<p>Simple listener to accept SMTP messages to stdout.<br>
+** py -m smtpd -n -c DebuggingServer localhost:25 **</p>
 <br>
 
 #### DNS Listener
